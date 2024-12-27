@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstractions", "Abstractions", "{CBB5188D-935F-4C66-B49A-58F095E596C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotSharp.Abstractions", "src\Abstractions\DotSharp.Abstractions\DotSharp.Abstractions.csproj", "{D1AA424D-1534-4857-A6B3-008BADD63C5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,11 +27,16 @@ Global
 		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1AA424D-1534-4857-A6B3-008BADD63C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AA424D-1534-4857-A6B3-008BADD63C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AA424D-1534-4857-A6B3-008BADD63C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AA424D-1534-4857-A6B3-008BADD63C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417} = {CB460756-EAA4-4EA1-8DA9-6218D361365A}
+		{D1AA424D-1534-4857-A6B3-008BADD63C5F} = {CBB5188D-935F-4C66-B49A-58F095E596C7}
 	EndGlobalSection
 EndGlobal

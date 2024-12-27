@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<PackageId>$(BasePackageId).Abstractions</PackageId>
+	<Title>$(BasePackageId).Abstractions</Title>
+	<Description>This a package designed to provide a set of core abstractions and interfaces for data access operations in a .NET application. It offers standardized patterns for CRUD operations, repository management, user information retrieval, and query specification handling. These abstractions promote consistency, reusability, and ease of maintenance across different application layers.</Description>
+	<AssemblyName>$(BasePackageId).Abstractions</AssemblyName>
+	<Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Primitives\DotSharp.Primitives\DotSharp.Primitives.csproj" />
+  </ItemGroup>
+
+</Project>

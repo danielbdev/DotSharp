@@ -5,6 +5,9 @@ This package provides an infrastructure for auditing entity changes (creation, u
 ## Compatibility
 - .NET 8
 
+## Dependencies
+- No Dependencies
+
 ## Features
 
 - **Audit Tracking**: Track when an entity is created, updated, or deleted.
