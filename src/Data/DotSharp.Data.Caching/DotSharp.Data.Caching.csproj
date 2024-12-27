@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<PackageId>$(BasePackageId).Data.Caching</PackageId>
+	<Title>$(BasePackageId).Data.Caching</Title>
+	<Description>This package provides an implementation of an in-memory caching service to improve application performance by storing and retrieving entities in memory. The MemoryCacheService class supports creating, managing, and clearing cache entries, as well as generating unique cache keys based on entities and requests.</Description>
+	<AssemblyName>$(BasePackageId).Data.Caching</AssemblyName>
+	<Version>1.0.0</Version>
+  </PropertyGroup>
+	
+  <ItemGroup>
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+	
+</Project>
