@@ -1,10 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Primitives", "Primitives", "{CB460756-EAA4-4EA1-8DA9-6218D361365A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotSharp.Primitives", "src\Primitives\DotSharp.Primitives\DotSharp.Primitives.csproj", "{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{580935DF-0D83-4C44-BDE1-B6ADF4B4834E}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EEB2D08A-2CB8-4B84-AA2B-CEFA9F0C1417} = {CB460756-EAA4-4EA1-8DA9-6218D361365A}
 	EndGlobalSection
 EndGlobal

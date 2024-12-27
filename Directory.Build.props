@@ -1,0 +1,15 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Company>DBDev</Company>
+		<Authors>Daniel Bejar</Authors>
+		<Product>DotSharp</Product>
+		<PackageProjectUrl>https://github.com/danielbdev/DotSharp</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/danielbdev/DotSharp</RepositoryUrl>
+		<BasePackageId>DotSharp</BasePackageId>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+</Project>
