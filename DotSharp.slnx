@@ -1,1 +1,17 @@
-<Solution />
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Core/">
+    <Project Path="src/Core/DotSharp.Primitives/DotSharp.Primitives.csproj" Id="bbf68745-2ac9-476d-9222-89d58fb368e3" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
