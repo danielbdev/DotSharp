@@ -23,4 +23,8 @@
     <Project Path="tests/Core/DotSharp.Primitives.Tests/DotSharp.Primitives.Tests.csproj" Id="6c7a149d-fbc7-4c40-b60b-8ab6b0d5b8a3" />
     <Project Path="tests/Core/DotSharp.Results.Tests/DotSharp.Results.Tests.csproj" Id="9019fd3d-ff07-4967-905b-7eae64fca622" />
   </Folder>
+  <Folder Name="/tests/Observability/">
+    <Project Path="tests/Observability/DotSharp.Observability.OpenTelemetry.Tests/DotSharp.Observability.OpenTelemetry.Tests.csproj" Id="1c2058e3-4d78-4f92-b9dc-43054b24b2be" />
+    <Project Path="tests/Observability/DotSharp.Observability.Tests/DotSharp.Observability.Tests.csproj" Id="137dfdca-8695-40a8-bd51-9cdc8aaa0f09" />
+  </Folder>
 </Solution>
