@@ -57,6 +57,7 @@ Errors.Validation("Invalid request.");
 Errors.Conflict("Order already exists.");
 Errors.Forbidden("You are not allowed to perform this action.");
 Errors.Unauthorized("Authentication is required.");
+Errors.Unexpected("An unexpected error occurred.");
 ```
 
 ### ErrorCodes
