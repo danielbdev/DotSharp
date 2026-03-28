@@ -30,4 +30,9 @@ public static class Errors
     /// Creates an unauthorized error.
     /// </summary>
     public static Error Unauthorized(string message) => new(ErrorCodes.Unauthorized, message);
+
+    /// <summary>
+    /// Creates an unexpected error.
+    /// </summary>
+    public static Error Unexpected(string message) => new(ErrorCodes.Unexpected, message);
 }

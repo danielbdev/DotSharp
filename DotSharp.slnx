@@ -15,4 +15,8 @@
     <Project Path="src/Core/DotSharp.Results/DotSharp.Results.csproj" Id="2b1ecc2f-d5e3-416b-aa14-bcbeefd20975" />
   </Folder>
   <Folder Name="/tests/" />
+  <Folder Name="/tests/Core/">
+    <Project Path="tests/Core/DotSharp.Primitives.Tests/DotSharp.Primitives.Tests.csproj" Id="6c7a149d-fbc7-4c40-b60b-8ab6b0d5b8a3" />
+    <Project Path="tests/Core/DotSharp.Results.Tests/DotSharp.Results.Tests.csproj" Id="9019fd3d-ff07-4967-905b-7eae64fca622" />
+  </Folder>
 </Solution>
