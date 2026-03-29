@@ -14,9 +14,5 @@
     <ProjectReference Include="..\..\Observability\DotSharp.Observability\DotSharp.Observability\DotSharp.Observability.csproj" />
     <ProjectReference Include="..\DotSharp.Application\DotSharp.Application.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Behaviors\" />
-  </ItemGroup>
   
 </Project>
