@@ -22,6 +22,9 @@
     <Project Path="src/Observability/DotSharp.Observability.OpenTelemetry/DotSharp.Observability.OpenTelemetry.csproj" Id="fa86b388-2686-4642-903f-874329ee89bb" />
     <Project Path="src/Observability/DotSharp.Observability/DotSharp.Observability/DotSharp.Observability.csproj" Id="30fcf083-ce00-4ef0-837a-9309a5d100af" />
   </Folder>
+  <Folder Name="/src/Persistence/">
+    <Project Path="src/Persistence/DotSharp.Persistence.Abstractions/DotSharp.Persistence.Abstractions.csproj" Id="5e6269f1-52f3-4d06-be83-04345fec4f0a" />
+  </Folder>
   <Folder Name="/tests/" />
   <Folder Name="/tests/Application/">
     <Project Path="tests/Application/DotSharp.Application.Observability.Tests/DotSharp.Application.Observability.Tests.csproj" Id="0b8581b8-1200-4235-8e30-5179c803dda9" />
