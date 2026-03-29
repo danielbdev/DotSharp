@@ -10,6 +10,10 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
+    <Project Path="src/Application/DotSharp.Application.Observability/DotSharp.Application.Observability.csproj" Id="59663bea-8d72-4475-a93d-02ab32123c7b" />
+    <Project Path="src/Application/DotSharp.Application/DotSharp.Application.csproj" Id="163d3dc6-df8c-4157-b8d5-8dd97cf0f069" />
+  </Folder>
   <Folder Name="/src/Core/">
     <Project Path="src/Core/DotSharp.Primitives/DotSharp.Primitives.csproj" Id="bbf68745-2ac9-476d-9222-89d58fb368e3" />
     <Project Path="src/Core/DotSharp.Results/DotSharp.Results.csproj" Id="2b1ecc2f-d5e3-416b-aa14-bcbeefd20975" />
