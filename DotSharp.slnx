@@ -24,6 +24,7 @@
   </Folder>
   <Folder Name="/src/Persistence/">
     <Project Path="src/Persistence/DotSharp.Persistence.Abstractions/DotSharp.Persistence.Abstractions.csproj" Id="5e6269f1-52f3-4d06-be83-04345fec4f0a" />
+    <Project Path="src/Persistence/DotSharp.Persistence.EFCore/DotSharp.Persistence.EFCore.csproj" Id="24d913fe-7a92-406d-8867-2ac4dbfefd42" />
   </Folder>
   <Folder Name="/tests/" />
   <Folder Name="/tests/Application/">
