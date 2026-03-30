@@ -12,14 +12,7 @@ public sealed class EfCoreAuditLog(DotSharpDbContext context) : IAuditLog
     /// <inheritdoc />
     public async Task LogAsync(IAuditLogEntry entry, CancellationToken cancellationToken = default)
     {
-        context.AuditLogEntries.Add(new AuditLogEntry(
-            entry.EntityName,
-            entry.EntityId,
-            entry.Action,
-            entry.OldValues,
-            entry.NewValues,
-            entry.ModifiedBy,
-            entry.ModifiedAt));
+        context.AuditLogEntries.Add(new AuditLogEntry(entry));
 
         await context.SaveChangesAsync(cancellationToken);
     }
