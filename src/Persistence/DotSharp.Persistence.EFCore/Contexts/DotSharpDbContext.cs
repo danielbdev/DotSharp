@@ -41,5 +41,10 @@ public abstract class DotSharpDbContext(DbContextOptions options) : DbContext(op
     /// Optional hook for derived contexts to apply additional model configuration.
     /// </summary>
     /// <param name="modelBuilder">The model builder.</param>
-    protected virtual void ConfigureModel(ModelBuilder modelBuilder) { }
+    protected virtual void ConfigureModel(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<AuditLogEntry>().HasKey(x => x.Id);
+        modelBuilder.Entity<OutboxMessage>().HasKey(x => x.Id);
+        modelBuilder.Entity<InboxConsumer>().HasKey(x => new { x.MessageId, x.Consumer });
+    }
 }
