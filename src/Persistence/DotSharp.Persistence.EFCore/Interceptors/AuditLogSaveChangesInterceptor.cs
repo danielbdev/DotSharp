@@ -37,6 +37,9 @@ public sealed class AuditLogSaveChangesInterceptor(
 
         foreach (EntityEntry entry in context.ChangeTracker.Entries())
         {
+            if (entry.Entity is AuditLogEntry)
+                continue;
+
             if (!HasTrackChangesAttribute(entry.Entity.GetType()))
                 continue;
 
@@ -68,15 +71,16 @@ public sealed class AuditLogSaveChangesInterceptor(
                     _jsonOptions)
                 : null;
 
-            await auditLog.LogAsync(new AuditLogEntry(
-                EntityName: entry.Entity.GetType().Name,
-                EntityId: entityId,
-                Action: action,
-                OldValues: oldValues,
-                NewValues: newValues,
-                ModifiedBy: currentUser.UserName,
-                ModifiedAt: DateTime.UtcNow),
-                cancellationToken);
+            await auditLog.LogAsync(new AuditLogEntry
+            {
+                EntityName = entry.Entity.GetType().Name,
+                EntityId = entityId,
+                Action = action,
+                OldValues = oldValues,
+                NewValues = newValues,
+                ModifiedBy = currentUser.UserName,
+                ModifiedAt = DateTime.UtcNow
+            }, cancellationToken);
         }
     }
 
