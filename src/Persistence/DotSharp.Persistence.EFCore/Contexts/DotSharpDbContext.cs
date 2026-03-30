@@ -1,3 +1,4 @@
+using DotSharp.Persistence.EFCore.AuditLog;
 using DotSharp.Persistence.EFCore.Inbox;
 using DotSharp.Persistence.EFCore.Outbox;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,11 @@ namespace DotSharp.Persistence.EFCore.Contexts;
 /// </summary>
 public abstract class DotSharpDbContext(DbContextOptions options) : DbContext(options)
 {
+    /// <summary>
+    /// The audit log entries set.
+    /// </summary>
+    public DbSet<AuditLogEntry> AuditLogEntries { get; set; }
+
     /// <summary>
     /// The outbox messages set.
     /// </summary>
