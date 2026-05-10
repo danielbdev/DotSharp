@@ -41,5 +41,6 @@
   </Folder>
   <Folder Name="/tests/Persistence/">
     <Project Path="tests/Persistence/DotSharp.Persistence.Abstractions.Tests/DotSharp.Persistence.Abstractions.Tests.csproj" Id="0c0e70ba-5927-4a76-ac5c-7081fa520708" />
+    <Project Path="tests/Persistence/DotSharp.Persistence.EFCore.Tests/DotSharp.Persistence.EFCore.Tests.csproj" Id="060bf49a-e985-4349-8421-c275236fc157" />
   </Folder>
 </Solution>
