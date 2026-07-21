@@ -1,6 +1,8 @@
 using DotSharp.Observability.Correlation;
 using DotSharp.Observability.Tracing;
 using DotSharp.Web;
+using DotSharp.Web.Filters;
+using DotSharp.Web.Results;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
@@ -39,7 +41,7 @@ public sealed class ServiceExtensionsTests
     }
 
     [Fact]
-    public void AddDotSharpWeb_RegistersGlobalExceptionHandler_AsScoped()
+    public void AddDotSharpWeb_RegistersErrorHttpMapper_AsSingleton()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -48,8 +50,53 @@ public sealed class ServiceExtensionsTests
         services.AddDotSharpWeb();
 
         // Assert
-        var registration = Assert.Single(services, sd => sd.ImplementationType?.Name == "GlobalExceptionHandler");
+        var registration = Assert.Single(services, sd => sd.ServiceType == typeof(IErrorHttpMapper));
+        Assert.Equal(ServiceLifetime.Singleton, registration.Lifetime);
+        // Factory-registered singletons don't set ImplementationType; verify via resolution
+        var provider = services.BuildServiceProvider();
+        var mapper = provider.GetRequiredService<IErrorHttpMapper>();
+        Assert.IsType<DefaultErrorHttpMapper>(mapper);
+    }
+
+    [Fact]
+    public void AddDotSharpWeb_RegistersResultToHttpFilter_AsScoped()
+    {
+        // Arrange
+        var services = new ServiceCollection();
+
+        // Act
+        services.AddDotSharpWeb();
+
+        // Assert
+        var registration = Assert.Single(services, sd => sd.ImplementationType == typeof(ResultToHttpFilter));
         Assert.Equal(ServiceLifetime.Scoped, registration.Lifetime);
+    }
+
+    [Fact]
+    public void AddDotSharpWeb_RegistersPaginationHeaderFilter_AsScoped()
+    {
+        // Arrange
+        var services = new ServiceCollection();
+
+        // Act
+        services.AddDotSharpWeb();
+
+        // Assert
+        var registration = Assert.Single(services, sd => sd.ImplementationType == typeof(PaginationHeaderFilter));
+        Assert.Equal(ServiceLifetime.Scoped, registration.Lifetime);
+    }
+
+    [Fact]
+    public void AddDotSharpWeb_RegistersGlobalExceptionHandler()
+    {
+        // Arrange
+        var services = new ServiceCollection();
+
+        // Act
+        services.AddDotSharpWeb();
+
+        // Assert
+        Assert.Contains(services, sd => sd.ImplementationType?.Name == "GlobalExceptionHandler");
     }
 
     [Fact]
