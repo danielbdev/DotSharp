@@ -22,6 +22,11 @@
     <Project Path="src/Observability/DotSharp.Observability.OpenTelemetry/DotSharp.Observability.OpenTelemetry.csproj" Id="fa86b388-2686-4642-903f-874329ee89bb" />
     <Project Path="src/Observability/DotSharp.Observability/DotSharp.Observability/DotSharp.Observability.csproj" Id="30fcf083-ce00-4ef0-837a-9309a5d100af" />
   </Folder>
+  <Folder Name="/src/Caching/">
+    <Project Path="src/Caching/DotSharp.Caching.Abstractions/DotSharp.Caching.Abstractions.csproj" Id="1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d" />
+    <Project Path="src/Caching/DotSharp.Caching.Memory/DotSharp.Caching.Memory.csproj" Id="2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e" />
+    <Project Path="src/Caching/DotSharp.Caching.Redis/DotSharp.Caching.Redis.csproj" Id="3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f" />
+  </Folder>
   <Folder Name="/src/Persistence/">
     <Project Path="src/Persistence/DotSharp.Persistence.Abstractions/DotSharp.Persistence.Abstractions.csproj" Id="5e6269f1-52f3-4d06-be83-04345fec4f0a" />
     <Project Path="src/Persistence/DotSharp.Persistence.EFCore/DotSharp.Persistence.EFCore.csproj" Id="24d913fe-7a92-406d-8867-2ac4dbfefd42" />
@@ -41,6 +46,11 @@
   <Folder Name="/tests/Observability/">
     <Project Path="tests/Observability/DotSharp.Observability.OpenTelemetry.Tests/DotSharp.Observability.OpenTelemetry.Tests.csproj" Id="1c2058e3-4d78-4f92-b9dc-43054b24b2be" />
     <Project Path="tests/Observability/DotSharp.Observability.Tests/DotSharp.Observability.Tests.csproj" Id="137dfdca-8695-40a8-bd51-9cdc8aaa0f09" />
+  </Folder>
+  <Folder Name="/tests/Caching/">
+    <Project Path="tests/Caching/DotSharp.Caching.Abstractions.Tests/DotSharp.Caching.Abstractions.Tests.csproj" Id="4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a" />
+    <Project Path="tests/Caching/DotSharp.Caching.Memory.Tests/DotSharp.Caching.Memory.Tests.csproj" Id="5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b" />
+    <Project Path="tests/Caching/DotSharp.Caching.Redis.Tests/DotSharp.Caching.Redis.Tests.csproj" Id="6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c" />
   </Folder>
   <Folder Name="/tests/Persistence/">
     <Project Path="tests/Persistence/DotSharp.Persistence.Abstractions.Tests/DotSharp.Persistence.Abstractions.Tests.csproj" Id="0c0e70ba-5927-4a76-ac5c-7081fa520708" />
