@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Gentle AI tooling
+.atl/
+
+# SDD planning artifacts (internal)
+openspec/

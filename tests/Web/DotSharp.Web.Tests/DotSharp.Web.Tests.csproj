@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+    <UseAppHost>true</UseAppHost>
+    <GenerateTestingPlatformEntryPoint>false</GenerateTestingPlatformEntryPoint>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Web\DotSharp.Web\DotSharp.Web.csproj" />
+    <ProjectReference Include="..\..\..\src\Core\DotSharp.Results\DotSharp.Results.csproj" />
+    <ProjectReference Include="..\..\..\src\Observability\DotSharp.Observability\DotSharp.Observability\DotSharp.Observability.csproj" />
+    <ProjectReference Include="..\..\..\src\Core\DotSharp.Primitives\DotSharp.Primitives.csproj" />
+  </ItemGroup>
+
+</Project>
