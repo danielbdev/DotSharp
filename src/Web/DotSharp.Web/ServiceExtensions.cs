@@ -1,7 +1,9 @@
 using DotSharp.Observability;
 using DotSharp.Observability.Correlation;
+using DotSharp.Web.Filters;
 using DotSharp.Web.Results;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DotSharp.Web;
@@ -13,7 +15,8 @@ public static class ServiceExtensions
 {
     /// <summary>
     /// Registers DotSharp web layer services including correlation context,
-    /// global exception handling, and validation endpoint filter.
+    /// global exception handling, validation endpoint filter, and automatic
+    /// Result/Result&lt;T&gt; → HTTP mapping via MVC filters.
     /// Defensively calls <see cref="Observability.ServiceExtensions.AddDotSharpObservability"/>
     /// if <see cref="DotSharp.Observability.Tracing.ITraceContext"/> is not already registered.
     /// </summary>
@@ -31,7 +34,19 @@ public static class ServiceExtensions
             return new CorrelationContext(id);
         });
 
-        services.AddScoped<GlobalExceptionHandler>();
+        services.AddSingleton<IErrorHttpMapper>(sp =>
+            new DefaultErrorHttpMapper(sp.GetRequiredService<IHttpContextAccessor>()));
+
+        services.AddScoped<ResultToHttpFilter>();
+        services.AddScoped<PaginationHeaderFilter>();
+
+        services.Configure<MvcOptions>(options =>
+        {
+            options.Filters.Add<ResultToHttpFilter>();
+            options.Filters.Add<PaginationHeaderFilter>();
+        });
+
+        services.AddExceptionHandler<GlobalExceptionHandler>();
         services.AddTransient<ValidationEndpointFilter>();
 
         if (services.All(sd => sd.ServiceType != typeof(DotSharp.Observability.Tracing.ITraceContext)))

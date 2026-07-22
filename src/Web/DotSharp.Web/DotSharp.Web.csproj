@@ -20,6 +20,7 @@
     <ProjectReference Include="..\..\Core\DotSharp.Results\DotSharp.Results.csproj" />
     <ProjectReference Include="..\..\Observability\DotSharp.Observability\DotSharp.Observability\DotSharp.Observability.csproj" />
     <ProjectReference Include="..\..\Core\DotSharp.Primitives\DotSharp.Primitives.csproj" />
+    <ProjectReference Include="..\..\Application\DotSharp.Application\DotSharp.Application.csproj" />
   </ItemGroup>
 
 </Project>
