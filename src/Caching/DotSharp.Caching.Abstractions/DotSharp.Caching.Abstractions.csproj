@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DotSharp.Results\DotSharp.Results.csproj" />
+    <ProjectReference Include="..\..\Persistence\DotSharp.Persistence.Abstractions\DotSharp.Persistence.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

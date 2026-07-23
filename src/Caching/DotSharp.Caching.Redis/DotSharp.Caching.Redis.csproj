@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotSharp.Caching.Abstractions\DotSharp.Caching.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
