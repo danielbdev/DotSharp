@@ -75,7 +75,6 @@ Registration: `AddDotSharp{Name}()` extension on `IServiceCollection`. README in
 ## .gitignore Policy
 
 - `.atl/` and `openspec/` are gitignored (internal tooling, not for open source consumers)
-- `Orion.Web/` is a local reference project — not committed
 
 ## Branch Strategy
 
