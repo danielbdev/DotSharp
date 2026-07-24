@@ -34,7 +34,7 @@ public sealed class CreateOrderHandler(
 {
     public async Task<Result<Guid>> Handle(CreateOrderCommand cmd, CancellationToken ct)
     {
-        var order = new Order(cmd.CustomerName, cmd.Total, clock.UtcNow);
+        var order = Order.Create(cmd.CustomerName, cmd.Total, clock.UtcNow);
         repo.Add(order);
         await uow.SaveChangesAsync(ct);
         return order.Id;
